@@ -11,7 +11,7 @@ const About = () => {
   const result = missionVission.filter((item) => {
     return item.title == active;
   });
-  console.log("hi");
+
   return (
     <div className="flex-1 ">
       <div className="flex mx-6 flex-col-reverse  max-md:gap-8  md:flex-row py-9">
