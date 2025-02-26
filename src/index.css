@@ -1,0 +1,12 @@
+@import "tailwindcss";
+* {
+  box-sizing: border-box;
+}
+
+.bg-gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(1, 73, 62, 1) 24%,
+    rgba(2, 175, 149, 1) 74%
+  );
+}
