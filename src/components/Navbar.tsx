@@ -8,12 +8,14 @@ const Navbar = () => {
   const [toggle, setToggle] = useState<boolean>(false);
   return (
     <nav className="flex relative max-[462px]:gap-3 gap-5 justify-between items-center  px-6 w-full font-medium   py-3   max-md:max-w-full">
-      <img
-        loading="lazy"
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/d498f58c6c27ddfbc793b00a720be2cd72be5d33066a0cb8700137e6fd70544a?placeholderIfAbsent=true&apiKey=00bedd7c3997447984bf9cef0c80b29a"
-        className="object-contain  max-[462px]:w-[180px] aspect-[5.13] w-[292px]"
-        alt="Company Logo"
-      />
+      <Link to={"/"}>
+        <img
+          loading="lazy"
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/d498f58c6c27ddfbc793b00a720be2cd72be5d33066a0cb8700137e6fd70544a?placeholderIfAbsent=true&apiKey=00bedd7c3997447984bf9cef0c80b29a"
+          className="object-contain  max-[462px]:w-[180px] aspect-[5.13] w-[292px]"
+          alt="Company Logo"
+        />
+      </Link>
       <div className="flex max-[768px]:hidden gap-10 items-center my-auto text-base leading-none text-emerald-900">
         {nav_items.map((item, ind) => (
           <Link
@@ -54,11 +56,11 @@ const Navbar = () => {
               className="cursor-pointer align text-white max-[462px]:text-xl text-2xl"
             />
           </div>
-          <div className="flex flex-1  flex-col items-center justify-center gap-10 text-white ">
+          <div className="flex flex-1  flex-col items-center justify-center gap-8 text-white ">
             {nav_items.map((item, ind) => (
               <Link
                 className="gap-1
-          text-red-400
+         text-white
            
             hover:text-emerald-700"
                 key={ind}

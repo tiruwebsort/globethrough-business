@@ -24,6 +24,16 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     console.log(e);
+    if (
+      !formData.firstName ||
+      !formData.companyName ||
+      !formData.email ||
+      !formData.phone ||
+      !formData.message
+    ) {
+      toast.error("Please fill all the fields");
+      return;
+    }
     setLoading(true);
     try {
       const response = await emailjs.send(

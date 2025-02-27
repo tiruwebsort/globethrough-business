@@ -30,15 +30,13 @@ const features = [
       "Dreaming of iconic landmarks, we ensure a seamless connection to wherever your heart desires.",
   },
   {
-    iconSrc:
-      "https://cdn.builder.io/api/v1/image/assets/00bedd7c3997447984bf9cef0c80b29a/e1b6de13819b0bd75a0d078c46bd9ef4b0b8bfd10f652c50088f566b7945bab5?placeholderIfAbsent=true",
+    iconSrc: imgIcons.time,
     title: "Last-Minute Bookings",
     description:
       "With instant confirmations, competitive fares, last-minute travel has never been simpler.",
   },
   {
-    iconSrc:
-      "https://cdn.builder.io/api/v1/image/assets/00bedd7c3997447984bf9cef0c80b29a/6a332d7e63324daf12b57bb8c9188aa710099bbc5e048d2b1d3f1c6173d8b1de?placeholderIfAbsent=true",
+    iconSrc: imgIcons.flexible,
     title: "Flexible Options",
     description:
       "Effortlessly modify, reschedule, or cancel flights to suit your dynamic lifestyle.",
@@ -91,14 +89,14 @@ const missionVission: VisionMission[] = [
   {
     title: "Mission",
     content:
-      "Globethrough simplifies flight booking with transparency, real-time deals, and no hidden fees. We ensure stress-free, affordable travel so every journey starts with confidence.",
+      "Globethrough simplifies travel with real-time deals, no hidden fees, and a seamless booking experience. We make air travel affordable, convenient, and stress-free for all.",
     image:
       "https://images.unsplash.com/photo-1527605158555-853f200063e9?q=80&w=1942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "Vission",
     content:
-      "Globethrough simplifies flight booking with transparency, real-time deals, and no hidden fees. We ensure stress-free, affordable travel so every journey starts with confidence.",
+      "To revolutionize flight booking by providing a seamless, transparent, and affordable experience, empowering travelers to explore the world with confidence and ease.",
     image:
       "https://images.unsplash.com/photo-1556388158-158ea5ccacbd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },

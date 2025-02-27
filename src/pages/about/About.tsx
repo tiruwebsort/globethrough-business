@@ -32,10 +32,10 @@ const About = () => {
           </p>
         </div>
 
-        <div className="flex-1 flex  md:items-center md:justify-center ">
+        <div className="flex-1 flex md:items-center md:justify-end">
           <img
             loading="lazy"
-            className="   aspect-square  sm:aspect-[0]  "
+            className="  w-[80%]  sm:aspect-[0]  "
             src={woweare}
             alt=""
           />
@@ -49,7 +49,7 @@ const About = () => {
           <div className=" max-[768px]:hidden flex w-[40%] flex-col  gap-9 ">
             {missionVission.map((item, ind) => {
               return (
-                <>
+                <div key={ind}>
                   {ind !== 0 && (
                     <div className="h-[0.2px] w-full bg-gray-400" />
                   )}
@@ -79,33 +79,31 @@ const About = () => {
                       }`}
                     />
                   </span>
-                </>
+                </div>
               );
             })}
           </div>
           <div className=" flex  gap-3 px-5 py-1 md:hidden bg-gray-200 rounded-3xl">
             {missionVission.map((item, ind) => {
               return (
-                <>
-                  <span
-                    key={ind}
-                    onMouseEnter={() => {
-                      console.log(item.title);
-                      setHover(item.title);
-                    }}
-                    onClick={() => {
-                      console.log(item.title);
-                      setActive(item.title);
-                    }}
-                    className={`${
-                      active == item.title
-                        ? "text-white  bg-emerald-900 "
-                        : "text-gray-500"
-                    } font-semibold rounded-3xl p-2   cursor-pointer flex  max-[768px]:text-[0.9rem] text-2xl items-center  gap-3 `}
-                  >
-                    {item.title}
-                  </span>
-                </>
+                <span
+                  key={ind}
+                  onMouseEnter={() => {
+                    console.log(item.title);
+                    setHover(item.title);
+                  }}
+                  onClick={() => {
+                    console.log(item.title);
+                    setActive(item.title);
+                  }}
+                  className={`${
+                    active == item.title
+                      ? "text-white  bg-emerald-900 "
+                      : "text-gray-500"
+                  } font-semibold rounded-3xl p-2   cursor-pointer flex  max-[768px]:text-[0.9rem] text-2xl items-center  gap-3 `}
+                >
+                  {item.title}
+                </span>
               );
             })}
           </div>
@@ -119,16 +117,16 @@ const About = () => {
         <h2 className=" md:text-5xl text-xl sm:text-3xl font-semibold capitalize">
           Message from CEO
         </h2>
-        <div className="  mt-10 max-[500px]:h-[250px] h-[400px] flex relative rounded-2xl">
+        <div className="mt-10 overflow-hidden max-[500px]:h-[250px] h-[400px] flex relative rounded-2xl">
           <img
             src={imgIcons.jayanth}
-            className="max-[500px]:w-[50%] max-[768px]:w-[40%]  h-full  max-[768px]  max-[828px]:left-[0%]  max-[1090px]:left-[10%] left-[20%] absolute bottom-0  "
+            className="max-[650px]:w-[45%] max-[830px]:w-[40%] max-[830px]:object-cover  h-full  max-[768px]  max-[1020px]:left-[0%]   max-[1150px]:left-[10%] left-[15%] absolute bottom-0"
             loading="lazy"
-            alt=""
+            alt="founder"
           />
 
           <div className="text-white bg-emerald-900  rounded-3xl max-[500px]:text-[0.5rem] max-[500px]:py-2 max-[500px]:px-2 max-[768px]:py-5 max-[828px]:py-10 py-14   self-end flex  items-end justify-end  max-[768px]:text-[1rem]  max-[1090px]:text-xl text-2xl px-5">
-            <div className="w-[50%]  max-[500px]:pl-2">
+            <div className="w-[50%] max-[500px]:pl-2">
               <p>
                 Welcome to Globethrough ! We are dedicated to making your flight
                 booking seamless, affordable, and hassle-free. Your journey

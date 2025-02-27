@@ -4,7 +4,7 @@ import Footer from "../../components/Footer";
 
 const Parent = () => {
   return (
-    <div className=" min-h-[100vh] mx-auto    flex flex-col justify-between  ">
+    <div className="min-h-[100vh] mx-auto flex flex-col justify-between">
       <Navbar />
       <main className="flex py-5 min-h-[100vh] ">
         <Outlet />

@@ -7,27 +7,51 @@ import FlightCard from "../../components/FlightCard";
 import BlogCard from "../../components/BlogCard";
 import SliderCompo from "../../components/Slider";
 import WorkingCompo from "./WorkingCompo";
+import { useState } from "react";
 
 const Home = () => {
+  const [active, setActive] = useState<boolean>(false);
+  const handleComingSoon = () => {
+    setActive(true);
+  };
   return (
     <div className="h-full w-full">
       <div className="flex  gap-5 py-8 mx-8  max-md:flex-col">
         <div className="w-6/12 max-md:w-full">
           <div className="mt-16 max-md:mt-10 max-md:max-w-full">
-            <div className="max-w-full w-[752px]">
-              <h1 className="font-bold max-[300px]:text-[2rem]  max-[500px]:text-[3rem] max-[500px]:leading-[50px] max-[1050px]:text-[4rem] text-black text-[5rem] max-[1050px]:leading-[80px] leading-[90px] max-md:max-w-full ">
-                Your Gateway to{" "}
-                <span className="bg-gradient-to-r from-emerald-900 to-emerald-400 bg-clip-text text-transparent">
+            <div className="max-w-full w-[762px]  relative">
+              <h1 className="font-bold max-[300px]:text-[2rem] max-[500px]:text-[3rem] max-[500px]:leading-[50px] max-[1050px]:text-[4rem] text-black text-[5rem] max-[1050px]:leading-[80px] leading-[90px] max-md:max-w-full">
+                Your Gateway to
+                <span className="bg-gradient-to-r from-emerald-900 to-emerald-400 bg-clip-text px-2 text-transparent">
                   Hassle-Free
-                </span>{" "}
+                </span>
                 Travel
               </h1>
-              <p className=" max-[1050px]:my-8 my-10  max-[300px]:text-lg max-[500px]:text-xl text-2xl font-light leading-7 text-zinc-800 max-md:max-w-full">
+              <p className="max-[1050px]:my-8 my-10 max-[300px]:text-lg max-[500px]:text-xl text-2xl font-light leading-7 text-zinc-800 max-md:max-w-full">
                 Whether you're planning a last-minute getaway, a business trip,
                 or a dream vacation, we've got you covered.
               </p>
+              {active && (
+                <div className="h-[300px] px-2  overflow-hidden w-full flex-col rounded-3xl bg-emerald-900 flex absolute top-0">
+                  <span
+                    onClick={() => {
+                      setActive(false);
+                    }}
+                    className="text-2xl text-white p-5 cursor-pointer self-end"
+                  >
+                    {" "}
+                    x
+                  </span>
+                  <div className="flex-1 flex items-center justify-center">
+                    <h1 className="max-[350px]:text-3xl text-5xl text-white mb-6 ">
+                      Coming Soon
+                    </h1>
+                  </div>
+                </div>
+              )}
               <div className="flex max-[500px]:flex-col max-[500px]:gap-4 gap-8">
                 <a
+                  onClick={handleComingSoon}
                   href="#"
                   className="px-2 py-1 max-[500px]:w-[150px] w-[180px] rounded-md flex items-center justify-center gap-2.5 bg-black text-white"
                 >
@@ -38,6 +62,7 @@ const Home = () => {
                   </span>
                 </a>
                 <a
+                  onClick={handleComingSoon}
                   href="#"
                   className="px-2 py-1 w-[180px] max-[500px]:w-[150px] rounded-md flex items-center justify-center gap-2.5 bg-black text-white"
                 >
@@ -56,7 +81,7 @@ const Home = () => {
             <img
               loading="lazy"
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/d2cf582593e77706d9a19f30bf630cefccf80600bb4ff6943656a97e6445a529?placeholderIfAbsent=true&apiKey=00bedd7c3997447984bf9cef0c80b29a"
-              className="   max-[1050px]:object-cover  absolute inset-0 size-full"
+              className="max-[1050px]:object-cover  absolute inset-0 size-full"
               alt="Travel Background"
             />
             <FlightCard />
@@ -64,15 +89,12 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="py-10 my-15 mx-0  bg-emerald-900 ">
+      <div className="py-10 my-15 mx-0 bg-gray-200">
         <SliderCompo>
           {partner.map((item, ind) => (
-            <div
-              key={ind}
-              className=" flex m-0 p-0  items-center justify-center "
-            >
+            <div key={ind} className="flex m-0 p-0 items-center justify-center">
               <img
-                className=" mx-auto w-[20%] aspect-square"
+                className="mx-auto h-[150px]"
                 alt={item.altText}
                 src={item.image}
               />
@@ -84,7 +106,7 @@ const Home = () => {
         <h2 className="max-[500px]:text-3xl max-[1050px]:text-4xl text-5xl font-semibold">
           Why Choose Us
         </h2>
-        <div className="flex max-[768px]:gap-4  gap-10 max-md:flex-col">
+        <div className="flex max-[768px]:gap-4 gap-10 max-md:flex-col">
           {features.map((item, ind) => (
             <div key={ind} className="w-[54%] max-md:w-full">
               <FeatureCard {...item} />
@@ -92,7 +114,7 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <div className="flex mx-8 gap-20 max-[768px]:gap-10  max-[768px]:flex-col justify-center">
+      <div className="flex mx-8 gap-20 max-[768px]:gap-10 max-[768px]:flex-col justify-center">
         <img
           src={wowe}
           alt="Who We Are"
@@ -112,7 +134,7 @@ const Home = () => {
         </div>
       </div>
       <WorkingCompo />
-      <div className=" flex flex-col gap-8 mx-6">
+      <div className="flex flex-col gap-8 mx-8">
         <h2 className="max-[500px]:text-3xl max-[1050px]:text-4xl text-5xl font-semibold">
           Join Us
         </h2>
@@ -144,7 +166,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className=" flex mx-8 flex-col gap-15">
+      <div className="flex max-[1400px]:mt-8 mx-8 flex-col gap-15">
         <h2 className="max-[500px]:text-3xl max-[1050px]:text-4xl  text-5xl font-semibold">
           Blogs
         </h2>
@@ -159,7 +181,7 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <div className="max-[650px]:h-auto max-[650px]:p-4 max-[650px]:gap-8   h-96 mx-8 rounded-4xl text-white flex flex-col gap-14 bg-emerald-900 my-15 justify-center items-center">
+      <div className="max-[650px]:h-auto max-[650px]:p-4 max-[650px]:gap-8 h-96 mx-8 rounded-4xl text-white flex flex-col gap-14 bg-emerald-900 my-15 justify-center items-center">
         <h3 className=" max-[650px]:text-2xl max-[650px]:text-center capitalize text-4xl font-bold">
           Your Journey starts here
         </h3>

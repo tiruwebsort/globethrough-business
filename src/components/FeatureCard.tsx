@@ -5,13 +5,15 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   title,
 }) => {
   return (
-    <article className="flex  flex-col h-full items-start max-md:mt-6">
-      <img
-        loading="lazy"
-        src={iconSrc}
-        className="object-contain aspect-square w-[71px]"
-        alt=""
-      />
+    <article className="flex flex-col h-full items-start max-md:mt-6">
+      <div className="w-[71px] bg-emerald-50  flex items-center justify-center h-[71px] rounded-full">
+        <img
+          loading="lazy"
+          src={iconSrc}
+          className="object-contain aspect-square"
+          alt=""
+        />
+      </div>
       <h3 className="mt-6 max-[768px]:mt-3  text-2xl font-bold text-stone-900">
         {title}
       </h3>

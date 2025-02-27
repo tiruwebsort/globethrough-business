@@ -12,6 +12,8 @@ import dollar from "./icons/dollar.svg";
 import react from "./icons/react.svg";
 import globe from "./icons/earth.svg";
 import blog3 from "./images/blog3.png";
+import flexible from "./icons/flexible.svg";
+import time from "./icons/time.svg";
 const imgIcons = {
   amtravels,
   bestdeal,
@@ -27,5 +29,7 @@ const imgIcons = {
   react,
   globe,
   blog3,
+  flexible,
+  time,
 };
 export default imgIcons;

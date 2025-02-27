@@ -1,7 +1,7 @@
 const FlightCard = () => {
   return (
-    <div className="flex absolute bottom-5  max-[300px]:hidden gap-2.5 pl-3 bg-white rounded-md shadow-sm">
-      <div className="z-10  my-auto">
+    <div className="flex absolute bottom-5 max-[300px]:hidden gap-2.5 pl-3 bg-white rounded-md shadow-sm">
+      <div className="z-10 my-auto">
         <div className="flex gap-5 justify-between text-xs font-bold whitespace-nowrap text-neutral-900 text-opacity-70 max-md:mr-1.5">
           <img
             loading="lazy"
@@ -22,7 +22,7 @@ const FlightCard = () => {
                 <span className="text-[8px] text-[#131313]">Bangalore</span>
               </div>
               <div className="mt-1 text-xs font-medium leading-4 text-neutral-900 text-opacity-70">
-                Kenpegownda International Airport Terminal 2
+                Kempegowda International Airport Terminal 2
               </div>
             </div>
             <div className="-mt-1 text-xs font-bold text-neutral-900 text-opacity-70">

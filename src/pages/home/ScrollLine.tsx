@@ -59,13 +59,11 @@ const ScrollLine: React.FC<ScrollLineProps> = ({ startOffset, endOffset }) => {
   const [scrollPercentage, setScrollPercentage] = useState(0);
 
   const handleScroll = () => {
-    console.log("scrolling");
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    console.log("scrolline srollto", scrollTop);
+
     const scrollHeight = document.documentElement.scrollHeight;
     const clientHeight = document.documentElement.clientHeight;
-    console.log("scrollHeight", scrollHeight, "clientHeight", clientHeight);
-    console.log("scrollOffset", startOffset, "endOffset", endOffset);
+
     if (scrollTop < startOffset) {
       setScrollPercentage(0);
     } else if (scrollTop > endOffset) {
