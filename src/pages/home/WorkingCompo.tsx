@@ -20,12 +20,15 @@ const WorkingCompo: React.FC = () => {
   }, []);
 
   return (
-    <div ref={containerRef} className="relative    mx-8  py-12">
+    <div
+      ref={containerRef}
+      className="relative  flex flex-col gap-10  max-[768px]:gap-5 mx-8  py-12"
+    >
       <h2 className="max-[500px]:text-3xl max-[1050px]:text-4xl text-5xl font-semibold">
         How Our App Works
       </h2>
-      <div className="flex relative  ">
-        <div className="  w-full  max-[768px]:space-y-9  space-y-12 ">
+      <div className="flex relative">
+        <div className="w-full max-[768px]:space-y-9 space-y-12">
           {howItWorksData.map((item, index) => {
             if ((index + 1) % 2 == 0) {
               return (

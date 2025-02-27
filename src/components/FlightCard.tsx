@@ -1,6 +1,6 @@
 const FlightCard = () => {
   return (
-    <div className="flex absolute bottom-5 max-[300px]:hidden gap-2.5 pl-3 bg-white rounded-md shadow-sm">
+    <div className="flex absolute bottom-5 max-[500px]:hidden gap-2.5 pl-3 bg-white rounded-md shadow-sm">
       <div className="z-10 my-auto">
         <div className="flex gap-5 justify-between text-xs font-bold whitespace-nowrap text-neutral-900 text-opacity-70 max-md:mr-1.5">
           <img

@@ -32,10 +32,10 @@ const About = () => {
           </p>
         </div>
 
-        <div className="flex-1 flex md:items-center md:justify-end">
+        <div className="flex-1 flex md:items-center md:justify-end max-[768px]:justify-center">
           <img
             loading="lazy"
-            className="  w-[80%]  sm:aspect-[0]  "
+            className="max-[768px]:w-[90%] max-[400px]:w-[100%] w-[80%] sm:aspect-[0]"
             src={woweare}
             alt=""
           />
@@ -45,13 +45,13 @@ const About = () => {
         <h2 className="md:text-5xl text-xl sm:text-3xl font-semibold capitalize">
           Get to know us
         </h2>
-        <div className="flex max-[768px]:flex-col gap-5 items-center mt-10 ">
-          <div className=" max-[768px]:hidden flex w-[40%] flex-col  gap-9 ">
+        <div className="flex max-[768px]:flex-col gap-5 items-center mt-10">
+          <div className=" max-[768px]:hidden flex w-[40%] flex-col">
             {missionVission.map((item, ind) => {
               return (
                 <div key={ind}>
                   {ind !== 0 && (
-                    <div className="h-[0.2px] w-full bg-gray-400" />
+                    <div className="h-[0.2px] my-9 w-full bg-gray-400" />
                   )}
                   <span
                     onMouseEnter={() => {
@@ -70,7 +70,7 @@ const About = () => {
                       active == item.title
                         ? "text-emerald-900 "
                         : "text-gray-300"
-                    } font-semibold  cursor-pointer flex text-2xl items-center  gap-3 `}
+                    } font-semibold cursor-pointer flex text-2xl items-center  gap-3 `}
                   >
                     {item.title}
                     <HiMiniArrowLongRight
@@ -128,10 +128,11 @@ const About = () => {
           <div className="text-white bg-emerald-900  rounded-3xl max-[500px]:text-[0.5rem] max-[500px]:py-2 max-[500px]:px-2 max-[768px]:py-5 max-[828px]:py-10 py-14   self-end flex  items-end justify-end  max-[768px]:text-[1rem]  max-[1090px]:text-xl text-2xl px-5">
             <div className="w-[50%] max-[500px]:pl-2">
               <p>
-                Welcome to Globethrough ! We are dedicated to making your flight
-                booking seamless, affordable, and hassle-free. Your journey
-                matters to us, and we strive to provide the best travel
-                experience. Thank you for choosing Globethrough!
+                <b>“Do Good For The World” </b>— that’s what my teacher taught
+                us. With this mission, we started Globethrough — a platform to
+                serve our customers. Customers who enjoy hassle-free and
+                affordable booking. It is our mission to empower everyone to
+                travel anywhere and everywhere while doing good for the world.
               </p>
               <p className="mt-5">
                 <b className=" max-[500px]:text-[0.5rem] max-[768px]:text-[1rem]">

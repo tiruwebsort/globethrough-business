@@ -13,7 +13,7 @@ const nav_items: NavItemsType[] = [
   },
   {
     path: "about",
-    title: "Who are we",
+    title: "Who we are",
   },
 ];
 const features = [

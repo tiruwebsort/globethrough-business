@@ -59,6 +59,9 @@ const Navbar = () => {
           <div className="flex flex-1  flex-col items-center justify-center gap-8 text-white ">
             {nav_items.map((item, ind) => (
               <Link
+                onClick={() => {
+                  setToggle(!toggle);
+                }}
                 className="gap-1
          text-white
            
@@ -71,6 +74,9 @@ const Navbar = () => {
             ))}
             <Link
               to={"/contact"}
+              onClick={() => {
+                setToggle(!toggle);
+              }}
               className="gap-3 border-1 px-5 py-2  rounded hover:bg-emerald-700 transition-colors"
             >
               JOIN US

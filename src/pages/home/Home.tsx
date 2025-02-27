@@ -77,11 +77,11 @@ const Home = () => {
           </div>
         </div>
         <div className="ml-5  w-6/12 max-md:ml-0  max-md:w-full">
-          <div className="flex   relative flex-col items-start px-16 pt-80 pb-24 w-full rounded-none min-h-[567px] max-[768px]:min-h-[450px] max-md:px-5 max-md:pt-24 max-md:max-w-full">
+          <div className="flex relative flex-col items-start max-[500px]:p-0 px-16 pt-80 pb-24 w-full rounded-none min-h-[567px] max-[768px]:min-h-[450px] max-md:px-5 max-md:pt-24 max-md:max-w-full">
             <img
               loading="lazy"
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/d2cf582593e77706d9a19f30bf630cefccf80600bb4ff6943656a97e6445a529?placeholderIfAbsent=true&apiKey=00bedd7c3997447984bf9cef0c80b29a"
-              className="max-[1050px]:object-cover  absolute inset-0 size-full"
+              className="max-[1050px]:object-cover absolute inset-0 size-full"
               alt="Travel Background"
             />
             <FlightCard />
@@ -122,7 +122,7 @@ const Home = () => {
         />
         <div className="flex flex-col w-[40%] max-[768px]:w-full  justify-center max-[1050px]:gap-5 gap-10">
           <h2 className=" max-[500px]:text-3xl max-[1050px]:text-4xl text-5xl font-semibold">
-            Who are we
+            Who We Are
           </h2>
           <p className=" max-[500px]:text-lg max-[500px]:leading-8  max-[1050px]:text-2xl text-3xl font-medium max-[1050px]:leading-10 leading-12 text-emerald-900">
             Who We Are: More than a booking platform, we're your travel
