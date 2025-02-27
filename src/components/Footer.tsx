@@ -69,7 +69,7 @@ const Footer = () => {
             </a>
             <a
               className="max-[450px]:gap-2 flex max-[650px]:justify-center items-center gap-5 text-[0.9rem]"
-              href="@mailto:info@globethrough.com"
+              href="mailto:info@globethrough.com"
             >
               <MdEmail className="text-[1rem]" />
               <span>info@globethrough.com</span>
