@@ -135,7 +135,7 @@ const About = () => {
               </p>
               <p className="mt-5">
                 <b className=" max-[500px]:text-[0.5rem] max-[768px]:text-[1rem]">
-                  Jayanth
+                  Jayanth S
                 </b>
                 <br />
                 <small>Websort</small>
